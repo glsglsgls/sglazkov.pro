@@ -1,5 +1,3 @@
-FROM nginx:1.24.0-alpine as runtime
-ENV WORKDIR=/srv/www
-COPY ./src/index.html $WORKDIR
+FROM nginx:1.24.0-alpine
+COPY src/index.html /srv/www
 COPY nginx.conf /etc/nginx
-# USER nginx
