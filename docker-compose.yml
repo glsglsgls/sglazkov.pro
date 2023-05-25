@@ -3,7 +3,7 @@ services:
   front:
     image: glsglsgls/sglazkov-pro-front:latest
     ports:
-      - 3080:80
+      - 80:80
     deploy:
       restart_policy:
         condition: on-failure
