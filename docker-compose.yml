@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   front:
-    image: sgtest_mysite:latest
+    image: glsglsgls/sglazkov-pro-front:latest
     ports:
       - 3080:80
     deploy:
