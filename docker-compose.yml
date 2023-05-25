@@ -1,0 +1,11 @@
+version: "0.1"
+services:
+  front:
+    image: sgtest_mysite:latest
+    ports:
+      - 3080:80
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 5
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
