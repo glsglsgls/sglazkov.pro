@@ -20,7 +20,6 @@ jobs:
           script: |
             cd /source
             git clone git@github.com:glsglsgls/sglazkov.pro.git
-            nginx -s reload
 
   docker_start:
     needs: [deploy-html-nginxconf]
