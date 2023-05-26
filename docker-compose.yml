@@ -6,6 +6,7 @@ services:
       - 80:80
     volumes:
       - ./front/src:/srv/www
+      - /source/challenge_mount:/srv/www/certbot
       - ./front/nginx.conf:/etc/nginx/nginx.conf
     deploy:
       restart_policy:
