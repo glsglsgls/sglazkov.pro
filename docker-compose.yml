@@ -7,6 +7,7 @@ services:
     volumes:
       - ./front/src:/srv/www
       - /source/challenge_mount:/srv/www/certbot
+      - /etc/letsencrypt:/etc/letsencrypt
       - ./front/nginx.conf:/etc/nginx/nginx.conf
     deploy:
       restart_policy:
