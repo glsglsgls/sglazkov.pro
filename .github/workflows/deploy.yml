@@ -32,4 +32,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            docker-compose -f ${{ env.DESTINATION_DIR }}/docker-compose.yml up -d
+            # docker-compose -f /source/sglazkov.pro/docker-compose.yml pull
+            # docker-compose -f /source/sglazkov.pro/docker-compose.yml down
+            docker-compose -f /source/sglazkov.pro/docker-compose.yml up -d
