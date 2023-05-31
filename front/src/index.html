@@ -1,25 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>личный сайт</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="mailru-domain" content="6vxO3pAeLwNAgGc8" />
+    <title>Сергей Глазков - личный сайт</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=2.0, user-scalable=yes">
+    <meta name="description" content="Сайт находится в разработке" >
+    <meta name="author" content="GLSGLSGLS">
+    <meta name="mailru-domain" content="6vxO3pAeLwNAgGc8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <body>
+    
+    
     <header class="head">
         <div class="wrapper">
-            <nav class="head__navbar">
-                <a class="head__menulink" href="#about">Обо мне</a>
-                <a class="head__menulink" href="#skills">Навыки</a>
-                <a class="head__menulink" href="#achievements">Достижения</a>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Обо мне</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Навыки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Достижения</a>
+                    </li>
+                </ul>
+                </div>
             </nav>
         </div>
     </header>
-    <main class="main_body">
-        <section class="section_hello">
+
+    <main class="main_body" role="main">
+        <section class="jumbotron">
             <div class="wrapper">
-                <div class="hello__text">
+                <div class="col-sm-8 mx-auto">
                     <h1>Я - Сергей Глазков</h1>
                     <div class="hello__text__about">
                         <p>И раз уж вы зашли на мою страничку - вот немного информации обо мне:</p>
@@ -30,16 +70,14 @@
                             alt="Rabbit"
                             width="300" 
                             height="200">
-                        <!-- /> -->
-                        
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="foot">
-        <div class="wrapper">
-            <h3>Не переключайтесь</h3>
+        <div class="col-sm-8 mx-auto">
+            <p>Не переключайтесь</p>
         </div>
     </footer>
 </body>
