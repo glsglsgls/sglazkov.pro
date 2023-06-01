@@ -62,7 +62,7 @@ body {
 @media (max-width: 1000px) {
     .hello_text__section {
         border-radius: 0.5rem;
-        box-shadow: inset 0px 0px 200px 50px #97979748;
+        box-shadow: inset 0px 0px 200px 50px #9797971a;
     }
   }
 
