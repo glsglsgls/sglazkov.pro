@@ -53,11 +53,20 @@ body {
     padding: 4rem 2rem;
     margin-bottom: 1rem;
     background-color: #e9ecef;
-    border-radius: 0.3rem;
+    box-shadow: inset 0px 0px 500px 10px #a8a8a848;
+    border-radius: 0.8rem;
     min-width: 330px;
     padding-right: 0cm;
     padding-left: 0cm;
 }
+@media (max-width: 1000px) {
+    .hello_text__section {
+        border-radius: 0.5rem;
+        box-shadow: inset 0px 0px 200px 50px #97979748;
+    }
+  }
+
+
 .hello_block {
     max-width: 650px;
     margin: auto;
