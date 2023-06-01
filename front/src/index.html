@@ -18,12 +18,23 @@
     <header class="head">
         <div class="wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="burger-menu">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a href="#" class="head__logolink__burger">
+                        <img src="./img/logo22.png" class="head__logo" alt="sglazkov.pro logo">
+                    </a>
+                </div>
+                
             
                 <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
                 <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="head__logolink">
+                            <img src="./img/logo22.png" width="45" height="31" class="head__logo" alt="sglazkov.pro logo">
+                        </a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Обо мне</a>
                     </li>
@@ -40,27 +51,30 @@
     </header>
 
     <main class="main_body" role="main">
-        <section class="jumbotron">
+        <section class="hello_text__section">
             <div class="wrapper">
-                <div class="col-sm-8 mx-auto">
-                    <h1>Я - Сергей Глазков</h1>
-                    <div class="hello__text__about">
+                <div class="hello_block">
+                    <div class="hello__text">
+                        <h1 class="h1_center">Я - Сергей Глазков</h1>
                         <p>И раз уж вы зашли на мою страничку - вот немного информации обо мне:</p>
-                        <p>Люблю кодить :)</p>
+                        <li class="list">
+                            <span>😱 Люблю кодить :)</span>
+                        </li>
+                        
                         <p>И скоро я обязательно напишу здесь что-нибудь интересное!</p>
                         <p>А пока вот вам картинка с кроликом</p>
+                    </div>
+                    <div class="hello__pic">
                         <img src="https://img.freepik.com/free-photo/happy-bunny-with-many-easter-eggs-grass-festive-background-decorative-design_90220-1091.jpg?w=1380&t=st=1685300218~exp=1685300818~hmac=03bcde018627dbbfa01c39dc9371b9325e6b41467046ea28f9e4bcf25dab9c6d" 
-                            alt="Rabbit"
-                            width="310" 
-                            height="210">
+                            alt="Rabbit">
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class="foot">
-        <div class="col-sm-8 mx-auto">
-            <p>Не переключайтесь</p>
+        <div class="footer__text">
+            <p>Не переключайтесь ©</p>
         </div>
     </footer>
 </body>
