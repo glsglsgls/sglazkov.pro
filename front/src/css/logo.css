@@ -1,15 +1,3 @@
-.head__logo {
-    display: block;
-    max-width: 100px;
-    width: 100%;
-    transition: transform 100ms;
-    margin-right: 100%;
-  
-    &:hover {
-      transform: scale(1.3);
-    }
-  }
-
 .logo__all {
     width:45px;
     height:auto;
@@ -18,9 +6,23 @@
     .logo__burger {
         display: none;
     }
+    .scale_when_hover_10 {
+        transition: transform 300ms;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    .scale_when_hover_20 {
+        transition: transform 300ms;
+        &:hover {
+            transform: scale(1.25);
+        }
+    }    
   }
   @media (max-width: 990px) {
     .logo__full {
         display: none;        
     }
   }
+
+
