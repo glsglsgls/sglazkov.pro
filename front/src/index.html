@@ -12,6 +12,93 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/logo.css">
+
+
+
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+    
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <meta name="theme-color" content="#712cf9">
+    
+    
+    <style>
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        }
+
+        @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+        }
+
+        .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+        }
+
+        .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+        }
+
+        .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        }
+
+        .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+        }
+        .bd-mode-toggle {
+        z-index: 1500;
+        }
+    </style>
+    
+        
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
 </head>
 
 <body>
@@ -27,8 +114,8 @@
                         <img src="./img/logo22.png" width="45" height="31" class="logo__burger logo__all" alt="sglazkov.pro logo">
                     </a>
                 </div>
-                
-            
+
+
                 <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item logo__full scale_when_hover_20">
@@ -51,35 +138,70 @@
         </div>
     </header>
 
-    <main class="main_body" role="main">
-        <section class="hello_text__section">
+    <main class="main_body">
+        <section class="base_section grey_gradient_bg">
             <div class="wrapper">
-                <div class="hello_block">
-                    <div class="hello__text">
-                        <h1 class="h1_center">Я - Сергей Глазков</h1>
-                        <p>И раз уж вы зашли на мою страничку - вот немного информации обо мне:</p>
-                        <li class="list">
-                            <span>😱 Люблю кодить :)</span>
-                        </li>
+                <div class="centered_content">
+                    <h1 class="h1_center">Я - Сергей Глазков</h1>
+                    <div class="flex">
+                        <div class="highlight_text_box">
+                            <p class="h2" id="work_in">Работаю в Polymatica ML</p>
+                            <p class="normal_text moved_down_56">2 года пишу на python, тренеруюсь в js</p>
+                            <p class="normal_text moved_down_29">Люблю тайп-хинты, классные <br> документации и творчество,<br>а рутину не люблю</p>
+                            <p class="normal_text moved_down_29">В прошлом был инженером и<br>работал в очень крутых международных<br>компаниях на интереснейших проектах</p>
+                            <p class="normal_text moved_down_29" id="small_quote">"Все есть CI/CD"</p>
+                        </div>
                         
-                        <p>И скоро я обязательно напишу здесь что-нибудь интересное!</p>
-                        <p>А пока вот вам картинка с кроликом</p>
+                            <div class="highlight_pic_box">
+                                <img class="my_photo" src="img/photo.png" width="100%" height="auto" alt="Кружочек со мной">    
+                                <address class="contacts">
+                                    <div class="contacts_wrap">
+                                        <a class="inline_link" href="https://t.me/glsglsgls"><img class="image_link" src="img/telegram.svg" alt=""></a>
+                                        <a class="inline_link" href="https://github.com/glsglsgls"><img class="image_link" src="img/github.svg" alt=""></a>
+                                        <a class="inline_link" href="https://www.linkedin.com/glsglsgls"><img class="image_link" src="img/linkedin.svg" alt=""></a>
+                                        <a class="inline_link" href="mailto:mail@sglazkov.pro"><img class="image_link" src="img/envelope-fill.svg" alt=""></a>
+                                    </div>
+                                </address>
+                            </div>
                     </div>
-                    <div class="hello__pic">
+                    <!-- <div class="hello__pic">
                         <img src="https://img.freepik.com/free-photo/happy-bunny-with-many-easter-eggs-grass-festive-background-decorative-design_90220-1091.jpg?w=1380&t=st=1685300218~exp=1685300818~hmac=03bcde018627dbbfa01c39dc9371b9325e6b41467046ea28f9e4bcf25dab9c6d" 
                         width="100%"" height="auto" alt="Rabbit">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
+        <section class="base_section">
+            <div class="wrapper">
+                <div class="centered_content">
+                    <h2 class="h2">Обо мне:</h2>
+                    <p class="multiline normal_text">
+                        Я пишу бэкэнд в команде <a href="https://www.polymatica.ru/polymatica-ml/">Polymatica ML</a>. Мы разработали и развиваем классный продукт для создания и управления модельками, и еще много всякого разного вокруг ML. Проект еще довольно молодой, мы активно растем и набиваем шишки. 
+                        Из моих достижений - у нас появились распределенные вычисления на dask вместо скучного pandas`а. Занимался фиче-инжинирингом и внедрил нашу систему к нескольким крупным заказчикам, написал с нуля пару сервисов, а еще у меня черный пояс по SQL 
+                        Также довелось быть координатором для совместной работы с внешними командами, немного погрузиться в devops, а еще поработать в качестве самозанятого на фрилансе на одном довольно объемном проекте (он есть в портфолио)
+                        Обожаю технические книги, изучаю технологии в основном только по ним. Сейчас активно исследую asyncio вместе с Фаулером и погружаюсь внутрь Postgres совместно с Роговым. На сайте скоро будет раздел по прочитанным мною книгам и о том, какую полезную информацию я из них вынес. Просто захотелось такое сделать :)
+                        Помимо работы я играю в большой теннис, увлекаюсь картингом, коллекционирую музыкальные инструменты и люблю собирать Lego. <br>Сильно горжусь тем, что на своей первой работе создавал <a href="https://www.herrenknecht.com/en/products/tunnelling/">большие машины</a>, которые автоматизированно строят тоннели по всему миру
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="carousel_demo">
+
+        </section>
+
+
+
     </main>
-    <footer class="foot">
-        <div class="footer__text">
-            <p>Не переключайтесь ©</p>
+    <footer class="base_section">
+        <div class="wrapper">
+            <div class="foot">
+                <p>Не переключайтесь ©</p>
+            </div>
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
