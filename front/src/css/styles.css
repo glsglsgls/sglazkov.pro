@@ -1,6 +1,11 @@
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
-    /* margin: 0; */
     padding-left: 0%;
     padding-right: 0%;
 }
@@ -18,7 +23,7 @@ body {
 .wrapper {
     margin: auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     min-width: 00px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -101,11 +106,17 @@ body {
     padding-left: 18px;
     font-size: 24px;
 }
-.multiline {
-    white-space: pre-wrap;
+h3 {
+    font-size: 20px;
+}
+.tab_first_string {
+    white-space: pre-line;
+    text-indent: 10%;
   }
 .normal_text {
+    
     padding-left: 34px;
+    padding-right: 20px;
     font-size: 18px;
 }
 .moved_down_56 {
@@ -148,3 +159,4 @@ body {
         display: none;
 
   }
+}

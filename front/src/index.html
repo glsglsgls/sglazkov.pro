@@ -1,73 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Сергей Глазков - личный сайт</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=2.0, user-scalable=yes">
-    <meta name="description" content="Сайт находится в разработке" >
-    <meta name="author" content="GLSGLSGLS">
-    <meta name="mailru-domain" content="6vxO3pAeLwNAgGc8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/logo.css">
+    <meta charset="UTF-8">  
 </head>
 
 <body>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-    
-        ym(93944403, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true
-        });
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/93944403" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    
-    <div class="body_container">
-    <header class="head">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
-                <div class="burger-menu">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-                        aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a href="#" class="logo__burger">
-                        <img src="./img/logo22.png" width="45" height="31" class="logo__burger logo__all" alt="sglazkov.pro logo">
-                    </a>
-                </div>
-
-
-                <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item logo__full scale_when_hover_20">
-                            <a href="#">
-                                <img src="./img/logo22.png" width="45" height="31" class="logo__full logo__all" alt="sglazkov.pro logo">
-                            </a>
-                        </li>
-                        <li class="nav-item scale_when_hover_10">
-                            <a class="nav-link" href="#about">Обо мне</a>
-                        </li>
-                        <li class="nav-item scale_when_hover_10">
-                            <a class="nav-link" href="#skills">Навыки</a>
-                        </li>
-                        <li class="nav-item scale_when_hover_10">
-                            <a class="nav-link" href="#achievements">Достижения</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-    </header>
-
     <main class="main_body">
         <section class="base_section grey_gradient_bg">
             <div class="wrapper">
@@ -77,7 +14,7 @@
                         <div class="highlight_text_box">
                             <p class="h2" id="work_in">Работаю в Polymatica ML</p>
                             <p class="normal_text moved_down_56">2 года пишу на python, тренеруюсь в js</p>
-                            <p class="normal_text moved_down_29">Люблю тайп-хинты, классные <br> документации и творчество,<br>а рутину не люблю</p>
+                            <p class="normal_text moved_down_29">Люблю тайп-хинты, классные <br> документации и творчество</p>
                             <p class="normal_text moved_down_29">В прошлом был инженером и<br>работал в очень крутых международных<br>компаниях на интереснейших проектах</p>
                             <p class="normal_text moved_down_29" id="small_quote">"Все есть CI/CD"</p>
                         </div>
@@ -93,45 +30,46 @@
                             </address>
                         </div>
                     </div>
-                    <!-- <div class="hello__pic">
-                        <img src="https://img.freepik.com/free-photo/happy-bunny-with-many-easter-eggs-grass-festive-background-decorative-design_90220-1091.jpg?w=1380&t=st=1685300218~exp=1685300818~hmac=03bcde018627dbbfa01c39dc9371b9325e6b41467046ea28f9e4bcf25dab9c6d" 
-                        width="100%"" height="auto" alt="Rabbit">
-                    </div> -->
                 </div>
             </div>
         </section>
-        <section class="base_section">
+        <section class="base_section" id="about">
             <div class="wrapper">
                 <div class="centered_content">
                     <h2 class="h2">Обо мне:</h2>
-                    <p class="multiline normal_text">
+                    <p class="tab_first_string normal_text moved_down_29">
                         Я пишу бэкэнд в команде <a href="https://www.polymatica.ru/polymatica-ml/">Polymatica ML</a>. Мы разработали и развиваем классный продукт для создания и управления модельками, и еще много всякого разного вокруг ML. Проект еще довольно молодой, мы активно растем и набиваем шишки. 
-                        Из моих достижений - у нас появились распределенные вычисления на dask вместо скучного pandas`а. Занимался фиче-инжинирингом и внедрил нашу систему к нескольким крупным заказчикам, написал с нуля пару сервисов, а еще у меня черный пояс по SQL 
+                    </p>
+                    <p class="tab_first_string normal_text">
+                            Из моих достижений - у нас появились распределенные вычисления на dask вместо скучного pandas`а. Занимался фиче-инжинирингом и внедрил нашу систему к нескольким крупным заказчикам, написал с нуля пару сервисов, а еще у меня черный пояс по SQL 
+                    </p>
+                    <p class="tab_first_string normal_text">
                         Также довелось быть координатором для совместной работы с внешними командами, немного погрузиться в devops, а еще поработать в качестве самозанятого на фрилансе на одном довольно объемном проекте (он есть в портфолио)
+                    </p>
+                    <p class="tab_first_string normal_text">
                         Обожаю технические книги, изучаю технологии в основном только по ним. Сейчас активно исследую asyncio вместе с Фаулером и погружаюсь внутрь Postgres совместно с Роговым. На сайте скоро будет раздел по прочитанным мною книгам и о том, какую полезную информацию я из них вынес. Просто захотелось такое сделать :)
+                    </p>
+                    <p class="tab_first_string normal_text">
                         Помимо работы я играю в большой теннис, увлекаюсь картингом, коллекционирую музыкальные инструменты и люблю собирать Lego. <br>Сильно горжусь тем, что на своей первой работе создавал <a href="https://www.herrenknecht.com/en/products/tunnelling/">большие машины</a>, которые автоматизированно строят тоннели по всему миру
                     </p>
                 </div>
             </div>
         </section>
-        <section class="carousel_demo">
-
-        </section>
-
-
-
-    </main>
-    </div>
-    <footer class="base_section">
-        <div class="wrapper">
-            <div class="foot">
-                <p>Не переключайтесь ©</p>
+        <section class="base_section carousel_demo" id="skills">
+            <div class="wrapper">
+                <div class="centered_content">
+                    <h2 class="h2">Навыки</h2>
+                </div>
             </div>
-        </div>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        </section>
+        <section class="base_section carousel_demo" id="gallery">
+            <div class="wrapper">
+                <div class="centered_content">
+                    <h2 class="h2">Портфолио</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/header_footer.js"></script>
 </body>
 </html>
