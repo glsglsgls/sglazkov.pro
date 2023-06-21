@@ -46,21 +46,21 @@ const header = `
     <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item logo__full scale_when_hover_20">
-                <a href="index.html">
+                <a href="sglazkov.pro">
                     <img src="./img/logo22.png" width="45" height="31" class="logo__full logo__all" alt="sglazkov.pro logo">
                 </a>
             </li>
             <li class="nav-item scale_when_hover_10">
-                <a class="nav-link" href="index.html#about">Обо мне</a>
+                <a class="nav-link" href="sglazkov.pro#about">Обо мне</a>
             </li>
             <li class="nav-item scale_when_hover_10">
-                <a class="nav-link" href="index.html#skills">Навыки</a>
+                <a class="nav-link" href="sglazkov.pro#skills">Навыки</a>
             </li>
             <li class="nav-item scale_when_hover_10">
-                <a class="nav-link" href="index.html#gallery">Портфолио</a>
+                <a class="nav-link" href="sglazkov.pro#gallery">Портфолио</a>
             </li>
             <li class="nav-item scale_when_hover_10">
-                <a class="nav-link" href="./books.html">Что по книгам?</a>
+                <a class="nav-link" href="sglazkov.pro/books">Что по книгам?</a>
             </li>
         </ul>
     </div>
