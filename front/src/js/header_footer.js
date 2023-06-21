@@ -67,8 +67,6 @@ const header = `
 </nav>
 `;
 
-
-
 const footer = `<footer class="base_section">
     <div class="wrapper">
         <div class="foot">

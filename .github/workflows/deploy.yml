@@ -18,9 +18,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            sudo -s
             cd /source/sglazkov.pro/
-            git pull
+            sudo git pull
 
   docker_start:
     needs: [deploy-html-nginxconf]
