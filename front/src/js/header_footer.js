@@ -11,7 +11,6 @@ const head_part = `<title>Сергей Глазков - личный сайт</t
 <link rel="stylesheet" href="css/logo.css">
 <link rel="stylesheet" href="css/books.css">`;
 
-
 const header = `
 <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
     <div class="burger-menu">
@@ -48,8 +47,6 @@ const header = `
 </nav>
 `;
 
-
-
 const footer = `<footer class="base_section">
     <div class="wrapper">
         <div class="foot">
@@ -58,29 +55,14 @@ const footer = `<footer class="base_section">
     </div>
 </footer>`;
 
-const scripts = [
-    "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js",
-    "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js",
-    "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
-];
 
-const body = document.querySelector('body');
 const head = document.querySelector('head');
 head.innerHTML += head_part;
 
+const body = document.querySelector('body');
 let head_el = document.createElement('header');
 head_el.classList.add('head');
 head_el.innerHTML = header;
 body.prepend(head_el);
 
-
 body.innerHTML+= footer;
-
-
-for (let i=0; i < scripts.length;i++) {
-    let fileref=document.createElement('script');
-    fileref.setAttribute("type","text/javascript")
-    fileref.setAttribute("src", scripts[i]);
-    body.appendChild(fileref);
-};
-
