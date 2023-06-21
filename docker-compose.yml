@@ -15,4 +15,15 @@ services:
         condition: on-failure
         max_attempts: 5
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
-    
+  back:
+    image: python
+    ports:
+      - 8080:8080
+    volumes:
+      - ./back:/srv/www
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 5
+    command: "/bin/sh -c 'cd srv/www/ && pip install -r ./requirements.txt && flask --app main run --port 8080'"
+
