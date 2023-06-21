@@ -1,4 +1,4 @@
-let url = 'http://127.0.0.1:8080';
+let url = 'https://sglazkov.pro/api/v1/books';
 
 function httpGet(theUrl)
 {
@@ -9,7 +9,8 @@ function httpGet(theUrl)
         xmlHttp.send( null );
         res = JSON.parse(xmlHttp.responseText);
     }
-    catch {
+    catch (error) {
+        console.error(error);
         res = [
             {
                 author: '',

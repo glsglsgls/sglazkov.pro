@@ -13,17 +13,9 @@ class Book:
 
 
 app = Flask(__name__)
-cors = CORS(app)
-cors = CORS(app, resource={
-    r"/*":{
-        "origins":"*"
-    }
-})
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
-app.config['CORS_HEADERS'] = 'Content-Type'
-
-
-@app.route("/")
+@app.route("/api/v1/books")
 @cross_origin()
 def hello_world() -> list[Book]:
     with get_db() as db:
@@ -31,3 +23,8 @@ def hello_world() -> list[Book]:
     return [
         Book(author=i["author"], name=i["name"], comments=i["comments"], img=i["img"]) for i in res
     ]
+
+
+if __name__ == '__main__':  
+     app.run(host='0.0.0.0', port=8080, debug=True)
+
