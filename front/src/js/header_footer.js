@@ -38,7 +38,7 @@ const header = `
             aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="index.html" class="logo__burger">
+        <a href="/" class="logo__burger">
             <img src="./img/logo22.png" width="45" height="31" class="logo__burger logo__all" alt="sglazkov.pro logo">
         </a>
     </div>
@@ -46,18 +46,18 @@ const header = `
     <div class="collapse navbar-collapse justify-content-md-center" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item logo__full scale_when_hover_20">
-                <a href="">
+                <a href="/">
                     <img src="./img/logo22.png" width="45" height="31" class="logo__full logo__all" alt=" logo">
                 </a>
             </li>
             <li class="nav-item scale_when_hover_10">
-                <a class="nav-link" href="#about">Обо мне</a>
+                <a class="nav-link" href="/#about">Обо мне</a>
             </li>
             <li class="nav-item scale_when_hover_10">
-                <a class="nav-link" href="#skills">Навыки</a>
+                <a class="nav-link" href="/#skills">Навыки</a>
             </li>
             <li class="nav-item scale_when_hover_10">
-                <a class="nav-link" href="#gallery">Портфолио</a>
+                <a class="nav-link" href="/#gallery">Портфолио</a>
             </li>
             <li class="nav-item scale_when_hover_10">
                 <a class="nav-link" href="/books">Что по книгам?</a>
