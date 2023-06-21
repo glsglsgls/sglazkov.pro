@@ -14,6 +14,11 @@ class Book:
 
 app = Flask(__name__)
 cors = CORS(app)
+cors = CORS(app, resource={
+    r"/*":{
+        "origins":"*"
+    }
+})
 
 app.config['CORS_HEADERS'] = 'Content-Type'
 
