@@ -65,8 +65,8 @@ const scripts = [
 ];
 
 const body = document.querySelector('body');
-// const head = document.querySelector('head');
-// head.innerHTML += head_part;
+const head = document.querySelector('head');
+head.innerHTML += head_part;
 
 let head_el = document.createElement('header');
 head_el.classList.add('head');
@@ -77,10 +77,10 @@ body.prepend(head_el);
 body.innerHTML+= footer;
 
 
-// for (let i=0; i < scripts.length;i++) {
-//     let fileref=document.createElement('script');
-//     fileref.setAttribute("type","text/javascript")
-//     fileref.setAttribute("src", scripts[i]);
-//     body.appendChild(fileref);
-// };
+for (let i=0; i < scripts.length;i++) {
+    let fileref=document.createElement('script');
+    fileref.setAttribute("type","text/javascript")
+    fileref.setAttribute("src", scripts[i]);
+    body.appendChild(fileref);
+};
 
