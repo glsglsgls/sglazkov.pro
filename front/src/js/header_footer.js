@@ -4,13 +4,7 @@ const head_part = `<title>Сергей Глазков - личный сайт</t
 <meta name="author" content="GLSGLSGLS">
 <meta name="mailru-domain" content="6vxO3pAeLwNAgGc8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/logo.css">
-<link rel="stylesheet" href="css/books.css">
-<link rel="stylesheet" href="css/froggy.css">`;
+`;
 
 const header = `
 <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
