@@ -9,7 +9,8 @@ const head_part = `<title>Сергей Глазков - личный сайт</t
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/logo.css">
-<link rel="stylesheet" href="css/books.css">`;
+<link rel="stylesheet" href="css/books.css">
+<link rel="stylesheet" href="css/froggy.css">`;
 
 const header = `
 <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
@@ -41,6 +42,9 @@ const header = `
             </li>
             <li class="nav-item scale_when_hover_10">
                 <a class="nav-link" href="/books">Что по книгам?</a>
+            </li>
+            <li class="nav-item scale_when_hover_10">
+                <a class="nav-link" href="#" onclick="playMusic();return false;">Выпусти жабу</a>
             </li>
         </ul>
     </div>
