@@ -143,13 +143,19 @@ h3 {
 }
 
 
-.chart {
-    margin:auto;
-    width: 600px;
+
+
+.chart_box {
+    height: 600px;
+    display: flex;
+    justify-content: center;
 }
 
 
-
+#myChart {
+    height: 100%;
+    width: 100%;
+}
 
 
 
