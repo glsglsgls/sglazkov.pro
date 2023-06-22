@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/books.css">
     <link rel="stylesheet" href="css/froggy.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -78,29 +80,35 @@
                 </div>
             </div>
         </section>
-        <section class="base_section carousel_demo" id="skills">
+        <section class="base_section" id="skills">
             <div class="wrapper">
                 <div class="centered_content">
                     <h2 class="h2">Навыки</h2>
+                        <div class="chart">
+                            <canvas id="myChart"></canvas>
+                        </div>
                 </div>
             </div>
         </section>
-        <section class="base_section carousel_demo" id="gallery">
+        <!-- <section class="base_section carousel_demo" id="gallery">
             <div class="wrapper">
                 <div class="centered_content">
                     <h2 class="h2">Портфолио</h2>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
     <div class="fg">
         <img class="frog_img" src="img/frog_l.png">
     </div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <script src="./js/header_footer.js"></script>
     <script src="./js/frog.js"></script>
+    <script src="./js/skills.js"></script>
 </body>
 </html>

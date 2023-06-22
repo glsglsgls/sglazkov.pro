@@ -32,9 +32,6 @@ const header = `
                 <a class="nav-link" href="/#skills">Навыки</a>
             </li>
             <li class="nav-item scale_when_hover_10">
-                <a class="nav-link" href="/#gallery">Портфолио</a>
-            </li>
-            <li class="nav-item scale_when_hover_10">
                 <a class="nav-link" href="/books">Что по книгам?</a>
             </li>
             <li class="nav-item scale_when_hover_10">
