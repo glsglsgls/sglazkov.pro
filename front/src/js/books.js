@@ -36,22 +36,27 @@ for (let i=0; i< books.length;i++) {
     let book_box = document.createElement('div');
     book_box.classList.add('book_box');
     
-    let pic_box = document.createElement('div');
-    pic_box.classList.add('book_pic');
-    let img = document.createElement('img');
-    img.classList.add('book_img')
-    img.src = books[i].img;
-    pic_box.appendChild(img);
+    // let pic_box = document.createElement('div');
+    // pic_box.classList.add('book_pic');
+    // let img = document.createElement('img');
+    // img.classList.add('book_img')
+    // img.src = books[i].img;
+    // pic_box.appendChild(img);
     
     let text_box = document.createElement('div');
     text_box.classList.add('book_text');
     
-    text_box.innerHTML = '<h3>' + books[i].name + ' - ' + books[i].author + '</h3>';
-    text_box.innerHTML += books[i].comments
+    let book_name = document.createElement('h3');
+    book_name.innerHTML = books[i].name + ' - ' + books[i].author
+    let book_comments = document.createElement('div');
+    book_comments.classList.add('comments_text');
+    book_comments.innerHTML = books[i].comments;
+    text_box.appendChild(book_name);
+    text_box.appendChild(book_comments);
+    // text_box.innerHTML = '<h3>' + books[i].name + ' - ' + books[i].author + '</h3>';
+    // text_box.innerHTML += '<div class="comments_text">' + books[i].comments + '</div>'
 
-    let text_height = text_box.offsetHeight
-
-    book_box.appendChild(pic_box);
+    // book_box.appendChild(pic_box);
     book_box.appendChild(text_box);
 
     books_div.appendChild(book_box);
