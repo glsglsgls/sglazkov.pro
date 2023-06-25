@@ -53,8 +53,6 @@ for (let i=0; i< books.length;i++) {
     book_comments.innerHTML = books[i].comments;
     text_box.appendChild(book_name);
     text_box.appendChild(book_comments);
-    // text_box.innerHTML = '<h3>' + books[i].name + ' - ' + books[i].author + '</h3>';
-    // text_box.innerHTML += '<div class="comments_text">' + books[i].comments + '</div>'
 
     // book_box.appendChild(pic_box);
     book_box.appendChild(text_box);
