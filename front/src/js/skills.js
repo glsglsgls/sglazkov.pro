@@ -13,7 +13,6 @@ const skills = [
     {'scikit learn': 4}, 
     {cython: 5},
     {django: 4},
-    {'gitlab ci/cd': 6}
 ];
 let shuffled_skills = skills
     .map(value => ({ value, sort: Math.random() }))
@@ -49,9 +48,9 @@ const config = {
         scales: {
             r: {
                 angleLines: {
-                    display: false
+                    display: true
                 },
-                suggestedMin: 1,
+                suggestedMin: 0,
                 suggestedMax: 10
             }
         },
