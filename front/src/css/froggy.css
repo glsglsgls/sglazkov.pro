@@ -8,15 +8,18 @@
     display: none;
     justify-content: center;
     animation: ani 1s forwards;
+    flex-direction: column;
 }
 
 
 
 
 .frog_img {
-    display: none;
+    opacity: 0%;
+    display: block;
     margin: auto;
     width: 20%;
+    /* animation: ani 1s forwards; */
 }
 
 @media (max-width: 992px) {
@@ -30,3 +33,22 @@
     0% {opacity: 0;}
     100% {opacity: 1;}
   }
+
+
+.close_btn {
+    float: right;
+    display: flex;
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.close_btn_text {
+    color: whitesmoke;
+    font-size: 30px;
+    transition: transform 300ms;
+    &:hover {
+        transform: scale(1.4);
+    }
+}

@@ -1,27 +1,30 @@
 const frog = document.querySelector('.frog_img');
 const back = document.querySelector('.fg');
+var music = new Audio('frog.mp3');
 
 
-function change_pic () {
-    let pic_url;
-    if (frog.getAttribute('src') === 'img/frog_l.png') {
-        pic_url = 'img/frog_r.png';
-    }
-    else {
-        pic_url = 'img/frog_l.png';
-    }
-    frog.setAttribute("src", pic_url);
+function showToad(){
+    back.style.display = 'block';
+    setTimeout(function(){frog.style.opacity = '100%';}, 1700);
+    frog.setAttribute("src", 'img/toad.gif');
+    setTimeout(function(){frog.setAttribute("src", 'img/toad2.gif');}, 12000);
+}
+
+function hideToad(){
+    frog.style.opacity = '0%';
+    back.style.display= 'none';
 }
 
 function playMusic(){
     setTimeout(function(){document.querySelector('.fg').style.display= 'flex';}, 100)
-    var music = new Audio('frog.mp3');
+    showToad();
     music.play();
-    setTimeout(function(){document.querySelector('.frog_img').style.display= 'block';}, 1700)
+    music.onended = function() {hideToad();};
+}
 
-    let i = 0;
-    let renew = setInterval(function(){
-        change_pic();
-    },325);
+function stopShow(){
+    hideToad();
+    music.pause();
+    music.currentTime = 0;
 }
 
