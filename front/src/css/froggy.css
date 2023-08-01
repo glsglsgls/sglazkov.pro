@@ -42,6 +42,10 @@
     height: 70px;
     justify-content: center;
     align-items: center;
+    appearance: button;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .close_btn_text {
