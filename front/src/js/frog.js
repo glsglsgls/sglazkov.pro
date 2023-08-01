@@ -1,3 +1,13 @@
+const frogText = `
+<div class="fg">
+    <button class="close_btn">
+        <div class="close_btn_text" href="#" onclick="stopShow();return false;"">X</div>
+    </button>
+    <img class="frog_img" src="img/toad.gif">
+</div>
+`;
+document.querySelector('body').innerHTML += frogText;
+
 const frog = document.querySelector('.frog_img');
 const back = document.querySelector('.fg');
 var music = new Audio('frog.mp3');
