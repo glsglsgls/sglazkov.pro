@@ -1,4 +1,4 @@
-let url = 'https://sglazkov.pro/api/v1/books';
+let url = location.origin + window.__BASE + "api/v1/books";
 
 function httpGet(theUrl)
 {
