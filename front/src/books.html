@@ -2,6 +2,15 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <base id="app-base">
+    <script>
+        (function () {
+            var seg = location.pathname.split('/').filter(Boolean);
+            var prefix = (seg[0] && seg[0] !== 'books') ? '/' + seg[0] : '';
+            window.__BASE = prefix + '/';
+            document.getElementById('app-base').href = location.origin + window.__BASE;
+        })();
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
