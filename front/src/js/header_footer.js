@@ -1,3 +1,11 @@
+(function () {
+    var seg = location.pathname.split('/').filter(Boolean);
+    var prefix = (seg[0] && seg[0] !== 'books') ? '/' + seg[0] : '';
+    window.__BASE = prefix + '/';
+    var el = document.createElement('base');
+    el.href = location.origin + window.__BASE;
+    document.head.appendChild(el);
+})();
 const head_part = `<title>Сергей Глазков - личный сайт</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=2.0, user-scalable=yes">
 <meta name="description" content="Сайт находится в разработке" >
