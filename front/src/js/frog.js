@@ -23,7 +23,7 @@
         return t;
     }
 
-    function addToad(src, cls, swapMs, liveMs) {
+    function addToad(src, cls, swapMs, liveMs, leaveMs) {
         var toad = document.createElement('img');
         toad.className = 'frog_img ' + cls;
         toad.src = src;
@@ -35,12 +35,15 @@
                 toad.classList.add('vibrate-1');
             }, swapMs);
         }
+        if (leaveMs) {
+            pushTimeout(function () { toad.classList.add('slide-out-left'); }, leaveMs);
+        }
         pushTimeout(function () { toad.remove(); }, liveMs);
         return toad;
     }
 
     function getManyToads() {
-        addToad('img/toad.gif', 'slide-in-top', 0, 6000);
+        addToad('img/toad.gif', 'slide-in-top', 0, 6000, 470);
         if (!stopped) { pushTimeout(getManyToads, 1320); }
     }
 
@@ -49,7 +52,7 @@
         stopped = false;
         modal.style.display = 'flex';
         pushTimeout(getManyToads, 1300);
-        pushTimeout(function () { addToad('img/toad2.gif', 'fade-in', 505, 11300); }, 12000);
+        pushTimeout(function () { addToad('img/toad2.gif', 'fade-in', 505, 11300, 0); }, 12000);
         var closeBtn = modal.querySelector('.close_btn');
         if (closeBtn) { closeBtn.focus(); }
     }
