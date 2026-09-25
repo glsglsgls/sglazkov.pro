@@ -23,6 +23,6 @@ jobs:
             git fetch origin --prune
             git switch -f main
             git pull --ff-only origin main
-            docker compose up -d --build
+            docker compose up -d --build --force-recreate
             docker exec sglazkovpro-front-1 nginx -s reload 2>/dev/null || true
             docker compose ps
