@@ -8,15 +8,15 @@
     }
     .scale_when_hover_10 {
         transition: transform 300ms;
-        &:hover {
-            transform: scale(1.1);
-        }
+    }
+    .scale_when_hover_10:hover {
+        transform: scale(1.1);
     }
     .scale_when_hover_20 {
         transition: transform 300ms;
-        &:hover {
-            transform: scale(1.25);
-        }
+    }
+    .scale_when_hover_20:hover {
+        transform: scale(1.25);
     }    
   }
   @media (max-width: 990px) {

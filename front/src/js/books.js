@@ -1,63 +1,56 @@
 let url = location.origin + window.__BASE + "api/v1/books";
 
-function httpGet(theUrl)
-{
-    let res = [];
-    try {
-        var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-        xmlHttp.send( null );
-        res = JSON.parse(xmlHttp.responseText);
+const fallbackBooks = [
+    {
+        author: '',
+        name: '',
+        comments: 'Возникла проблема на стороне сервера..',
+        img: ''
     }
-    catch (error) {
-        console.error(error);
-        res = [
-            {
-                author: '',
-                name: '',
-                comments: 'Возникла проблема на стороне сервера..',
-                img: ''
-            }
-        ];
-    }
-    
-    // if (xmlHttp.status != 200) {
-    return res.map(value => ({ value, sort: Math.random() }))
+];
+
+function shuffle(values) {
+    return values
+        .map(value => ({ value, sort: Math.random() }))
         .sort((a, b) => a.sort - b.sort)
         .map(({ value }) => value);
+}
+
+async function loadBooks() {
+    let books = [];
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('HTTP ' + response.status);
+        }
+        books = await response.json();
+    } catch (error) {
+        console.error(error);
+        books = fallbackBooks;
     }
-    
 
-let books = httpGet(url);
+    books = shuffle(books);
 
-const books_div = document.querySelector('.content');
+    const booksDiv = document.querySelector('.content');
+    for (const book of books) {
+        const box = document.createElement('div');
+        box.classList.add('book_box');
 
-for (let i=0; i< books.length;i++) {
-    let book_box = document.createElement('div');
-    book_box.classList.add('book_box');
-    
-    // let pic_box = document.createElement('div');
-    // pic_box.classList.add('book_pic');
-    // let img = document.createElement('img');
-    // img.classList.add('book_img')
-    // img.src = books[i].img;
-    // pic_box.appendChild(img);
-    
-    let text_box = document.createElement('div');
-    text_box.classList.add('book_text');
-    
-    let book_name = document.createElement('h3');
-    book_name.innerHTML = books[i].name + ' - ' + books[i].author
-    let book_comments = document.createElement('div');
-    book_comments.classList.add('comments_text');
-    book_comments.innerHTML = books[i].comments;
-    text_box.appendChild(book_name);
-    text_box.appendChild(book_comments);
+        const textBox = document.createElement('div');
+        textBox.classList.add('book_text');
 
-    // book_box.appendChild(pic_box);
-    book_box.appendChild(text_box);
+        const name = document.createElement('h3');
+        name.appendChild(document.createTextNode(book.name + ' - ' + book.author));
 
-    books_div.appendChild(book_box);
-};
+        const comments = document.createElement('div');
+        comments.classList.add('comments_text');
+        comments.appendChild(document.createTextNode(book.comments));
 
+        textBox.appendChild(name);
+        textBox.appendChild(comments);
+        box.appendChild(textBox);
+        booksDiv.appendChild(box);
+    }
+}
 
+loadBooks();
