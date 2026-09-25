@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Сергей Глазков — личный сайт</title>
     <!--# include virtual="/partials/head.html" -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/logo.css">
@@ -18,58 +18,71 @@
     <!--# include virtual="/partials/header.html" -->
 
     <main class="main_body">
-        <section class="base_section grey_gradient_bg">
+        <section class="hero">
             <div class="wrapper">
-                <div class="centered_content">
-                    <h1 class="h1_center"><span id="hide_on_narrow">Я - </span>Сергей Глазков</h1>
-                    <div class="flex">
-                        <div class="highlight_text_box">
-                            <p class="h2" id="work_in">Работаю в ИТ-экосистеме аэропорта Шереметьево</p>
-                            <p class="normal_text moved_down_56">6 лет в backend, Python — основной язык</p>
-                            <p class="normal_text moved_down_29">Люблю тайп-хинты, классные <br> документации и творчество</p>
-                            <p class="normal_text moved_down_29">Раньше строил тоннели,<br>теперь строю сервисы</p>
-                            <p class="normal_text moved_down_29" id="small_quote">"Все есть CI/CD"</p>
-                        </div>
-                        <div class="highlight_pic_box">
-                            <img class="my_photo" src="img/photo.png" width="100%" height="auto" alt="Кружочек со мной">    
-                            <address class="contacts">
-                                <div class="contacts_wrap">
-                                    <a class="inline_link" href="https://t.me/glsglsgls"><img class="image_link" src="img/telegram.svg" alt=""></a>
-                                    <a class="inline_link" href="https://github.com/glsglsgls"><img class="image_link" src="img/github.svg" alt=""></a>
-                                    <a class="inline_link" href="https://ru.linkedin.com/in/glsglsgls"><img class="image_link" src="img/linkedin.svg" alt=""></a>
-                                    <a class="inline_link" href="mailto:mail@sglazkov.pro"><img class="image_link" src="img/envelope-fill.svg" alt=""></a>
-                                </div>
-                            </address>
-                        </div>
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <p class="eyebrow"><span class="pulse-dot"></span>Backend · Python · 6 лет в IT</p>
+                        <h1 class="hero-name"><span id="hide_on_narrow">Я — </span><span class="grad-text">Сергей Глазков</span></h1>
+                        <p class="hero-lead" id="work_in">Работаю в ИТ-экосистеме аэропорта Шереметьево</p>
+                        <ul class="hero-chips">
+                            <li>6 лет в backend, Python — основной язык</li>
+                            <li>Люблю тайп-хинты, классные документации и творчество</li>
+                            <li>Раньше строил тоннели, теперь строю сервисы</li>
+                        </ul>
+                        <p class="hero-quote" id="small_quote">«Всё есть CI/CD»</p>
+                        <address class="contacts">
+                            <div class="contacts_wrap">
+                                <a class="inline_link" href="https://t.me/glsglsgls" title="Telegram"><img class="image_link" src="img/telegram.svg" alt="Telegram"></a>
+                                <a class="inline_link" href="https://github.com/glsglsgls" title="GitHub"><img class="image_link" src="img/github.svg" alt="GitHub"></a>
+                                <a class="inline_link" href="https://ru.linkedin.com/in/glsglsgls" title="LinkedIn"><img class="image_link" src="img/linkedin.svg" alt="LinkedIn"></a>
+                                <a class="inline_link" href="mailto:mail@sglazkov.pro" title="Написать письмо"><img class="image_link" src="img/envelope-fill.svg" alt="Почта"></a>
+                            </div>
+                        </address>
                     </div>
+                    <figure class="hero-visual">
+                        <div class="photo-frame">
+                            <img class="photo-img" src="img/photo.png" alt="Сергей Глазков">
+                        </div>
+                    </figure>
                 </div>
             </div>
         </section>
-        <section class="base_section" id="about">
+        <section class="about" id="about">
             <div class="wrapper">
-                <div class="centered_content">
-                    <h2 class="h2">Обо мне:</h2>
-                    <p class="tab_first_string normal_text moved_down_29">
-                        Я — бэкенд-разработчик, в IT уже 6 лет. Основной язык — Python. Довожу продукты до промышленной эксплуатации, от идеи до результата
-                    </p>
-                    <p class="tab_first_string normal_text">
-                        Привык отвечать за продукт целиком: поднимал с нуля платформы для машинного обучения и продукты для low-code аналитики, которые успешно работают в проде у крупных производственных компаний.
-                    </p>
-                    <p class="tab_first_string normal_text">
-                        Сейчас работаю в цифровой экосистеме аэропорта Шереметьево — одного из крупнейших аэропортов в Европе — руковожу двумя командами разработки. Наши системы обеспечивают работу не только Шереметьево, а еще и топ 5 других крупных аэропортов нашей страны. Вы видите, слышите и ощущаете наши творения, когда приезжаете в аэропорт, регистрируетесь на рейс или поднимаетесь по трапу в заправленный самолет
-                    </p>
-                    <p class="tab_first_string normal_text">
-                        В одной из компаний возглавлял центр экспертизы по продуктам: стандарты внедрения, обучение команд и клиентов, сопровождение пилотов. Под моим началом выросла команда из шести человек. Выступал на внутренних митапах, писал лекции для курсов по MLOps.
-                    </p>
-                    <p class="tab_first_string normal_text">
-                        Играю в большой теннис, увлекаюсь картингом, Lego и музыкальными инструментами. Неплохо знаю 2 иностранных языка
-                    </p>
-                    <p class="tab_first_string normal_text">
-                        Интересный факт #1: до IT был инженером и создавал большие машины, которые автоматизированно строят тоннели по всему миру.
-                    </p>
-                    <p class="tab_first_string normal_text">
-                        Интересный факт #2: На одной из работ собрал коллег в настоящую рок-группу и организовал крутой концерт на корпоративе
-                    </p>
+                <div class="about-grid">
+                    <aside class="about-aside">
+                        <p class="eyebrow">Обо мне</p>
+                        <h2 class="about-title">Человек, который отвечает за продукт целиком</h2>
+                        <p class="about-short">Бэкенд, тимлидство, MLOps и немного тоннелестроения в прошлом.</p>
+                    </aside>
+                    <div class="about-body">
+                        <p class="about-p">
+                            <strong>Я — бэкенд-разработчик, в IT уже 6 лет. Основной язык — Python.</strong> Довожу продукты до промышленной эксплуатации, от идеи до результата
+                        </p>
+                        <p class="about-p">
+                            Привык отвечать за продукт целиком: поднимал с нуля платформы для машинного обучения и продукты для low-code аналитики, которые успешно работают в проде у крупных производственных компаний.
+                        </p>
+                        <p class="about-p">
+                            Сейчас работаю в цифровой экосистеме аэропорта Шереметьево — одного из крупнейших аэропортов в Европе — <strong>руковожу двумя командами разработки.</strong> Наши системы обеспечивают работу не только Шереметьево, а еще и топ 5 других крупных аэропортов нашей страны. Вы видите, слышите и ощущаете наши творения, когда приезжаете в аэропорт, регистрируетесь на рейс или поднимаетесь по трапу в заправленный самолет
+                        </p>
+                        <p class="about-p">
+                            В одной из компаний возглавлял центр экспертизы по продуктам: стандарты внедрения, обучение команд и клиентов, сопровождение пилотов. Под моим началом выросла команда из шести человек. Выступал на внутренних митапах, писал лекции для курсов по MLOps.
+                        </p>
+                        <p class="about-p">
+                            Играю в большой теннис, увлекаюсь картингом, Lego и музыкальными инструментами. Неплохо знаю 2 иностранных языка
+                        </p>
+                        <div class="facts">
+                            <article class="fact-card">
+                                <span class="fact-tag">Интересный факт #1</span>
+                                <p>До IT был инженером и создавал большие машины, которые автоматизированно строят тоннели по всему миру.</p>
+                            </article>
+                            <article class="fact-card">
+                                <span class="fact-tag">Интересный факт #2</span>
+                                <p>Собрал коллег в настоящую рок-группу и организовал крутой концерт на корпоративе.</p>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
