@@ -349,3 +349,13 @@
     }
   }
   
+
+@media (prefers-reduced-motion: reduce) {
+    .slide-in-top,
+    .slide-out-left,
+    .vibrate-1,
+    .fade-in,
+    .heartbeat {
+        animation: none;
+    }
+}
