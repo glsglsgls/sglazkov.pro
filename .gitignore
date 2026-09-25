@@ -1,5 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
 *nginx.pid
 *letsencrypt*
 .vscode*
-HTML-CSS*
-*.pyc
+HTML-CSS*._*

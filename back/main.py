@@ -1,7 +1,9 @@
+from dataclasses import dataclass
+
 from flask import Flask
 from flask_cors import CORS, cross_origin
+
 from db import get_db
-from dataclasses import dataclass
 
 
 @dataclass
@@ -15,9 +17,10 @@ class Book:
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
+
 @app.route("/api/v1/books")
 @cross_origin()
-def hello_world() -> list[Book]:
+def list_books() -> list[Book]:
     with get_db() as db:
         res = db.execute("select author, name, comments, img from books").fetchall()
     return [
@@ -25,3 +28,6 @@ def hello_world() -> list[Book]:
     ]
 
 
+@app.route("/healthz")
+def healthz() -> str:
+    return "ok"
