@@ -57,12 +57,14 @@
     border: none;
     cursor: pointer;
     outline: none;
-    &:hover {
-        transform: scale(1.3);
-    }
-    &:active {
-        outline: none;
-    }
+}
+
+.close_btn:hover {
+    transform: scale(1.3);
+}
+
+.close_btn:active {
+    outline: none;
 }
 
 .close_btn_text {
