@@ -47,12 +47,18 @@
         if (!stopped) { pushTimeout(getManyToads, 1320); }
     }
 
+    function changeToad() {
+        clearAllTimeouts();
+        modal.querySelectorAll('.frog_img').forEach(function (el) { el.remove(); });
+        addToad('img/toad2.gif', 'fade-in', 505, 10800, 0);
+    }
+
     function startShow() {
         clearAllTimeouts();
         stopped = false;
         modal.style.display = 'flex';
         pushTimeout(getManyToads, 1300);
-        pushTimeout(function () { addToad('img/toad2.gif', 'fade-in', 505, 11300, 0); }, 12000);
+        pushTimeout(changeToad, 12000);
         var closeBtn = modal.querySelector('.close_btn');
         if (closeBtn) { closeBtn.focus(); }
     }
